@@ -6,8 +6,4 @@ const Button = (props) => {
   );
 }
 
-Button.defaultProps = {
-  content: 'knopka'
-}
-
 export default Button;
