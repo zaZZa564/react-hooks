@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Button = (props) => {
   let [click, setClick] = useState(0);
-  console.log(click);
+  
+  useEffect(() => {
+    document.title = `count = ${click}`;
+  });
+
   return (
     <button onClick={() => setClick(click++)}>
       {props.content}
