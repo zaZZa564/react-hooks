@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Button = (props) => {
+  let [click, setClick] = useState(0);
+  console.log(click);
   return (
-    <button>{props.content}</button>
+    <button onClick={() => setClick(click++)}>
+      {props.content}
+    </button>
   );
 }
 
